@@ -1,139 +1,339 @@
-﻿// c# mở đầu 
-// bai 1
-                Console.WriteLine("Hello, World!");
-                int tuoi = 15;
-                double met = 1.20;
-                double chieu_cao =0.45;
-                double b = met + chieu_cao;
-                char gioitinh ='A' ;
-                Console.Write( "gioi tinh do la" +" " + gioitinh +" " +
-                               "toui cua toi la " + tuoi +" " +
-                               "tong so met la " + b +'\n' );
-// bai 2 
-                int namSinh = 2004;
-                int namHienTai = DateTime.Now.Year; // Tự động lấy năm từ hệ thống máy tính
-                int so_tuoi = namHienTai - namSinh;
 
-                Console.WriteLine($"Tuoi hien tai cua ban la: {so_tuoi}" + '\n');
-//bai 3
-                string ten = "tran";
-                string ten_dem = " van quang";
-                Console.WriteLine(ten + ten_dem +'\n');
-//bai 4
-                string ten_san_pham = "chuoi"+" tao"+ " man";
-                Console.WriteLine(ten_san_pham);
-                string gia_san_pham = "24K" +"  60k" +"  12k";
-                Console.WriteLine(gia_san_pham);
-                int chuoi = 19;
-                int tao = 23;
-                int man = 30;
-                Console.WriteLine("so luong ton kho la : " +"chuoi la" +" " + chuoi
-                                  +" " +"tao la" +" " +tao +" "
-                                  + "man la" + " " + man +'\n');
-                Boolean san_pham_con_hang = chuoi + tao + man > 0;
-                Console.WriteLine("cac san pham con hang la :" + san_pham_con_hang);
-//bai 5
-                //chu vi hinh vuong
-                int c = 8;
-                int c1 = 4;
-                int c2 = c1 * c;
-                Console.WriteLine("cach tinh chu vi hinh vuong la : " + c2);
-                // dien tich hinh vuong
-                int d = 8;
-                int d1 = 8;
-                int d2 = d1 * c;
-                Console.WriteLine("cach tinh dien tich hinh vuong la : " + d2);
-// bai 6
-                //chu vi hinh chu nhat
-                double ch = 14.5;
-                double r = 6.2;
-                double tong = (ch + r) * 2;
-                Console.WriteLine("cach tinh chu vi hinh chu nhat la : " + tong);
-                //dien tich hinh chu nhat
-                double ch1 = 14.5;
-                double r1 = 6.2;
-                double tong1 = ch1 * r1;
-                Console.WriteLine("cach tinh dien tich hinh chu nhat la : " + tong1);
-// bai 7
-                //chu vi cua hinh tron la
-                const double PI = 3.14159;
-                double r2 = 5.5;
-                double tong2 = r2 *PI;
-                Console.WriteLine("chu vi cua hinh tron la : " + tong2);
-                //dien tich cua hinh tron la
-                const double PI1 = 3.14159;
-                double r23 = 5.5;
-                double tong23 = r23 * 2 * PI1;
-                Console.WriteLine("dien tich cua hinh tron la : " + tong23);
-// bai 8
-                double quangDuong = 105;
-                double thoiGian = 2 ;
-                double vantoc = quangDuong / thoiGian;
-                Console.WriteLine("van toc cua xe la  : " + vantoc);
-// bai 9
-                double lượngUSD = 120.5;
-                double tyGia = 25450 ;
-                double tyGiaVN = tyGia  / lượngUSD ;
-                Console.WriteLine("ty gia khi quy doi ra tien VN la " + tyGiaVN);
-// bai 10
-                int tongSoKeo = 32;
-                int soHocSinh = 6;
-                Console.WriteLine(" so keo nguyen và thay con du la : " + (tongSoKeo / soHocSinh));
-// bai 11
-                int tongSoNgay = 45 ;
-                int tuan = tongSoNgay / 4 ;
-                int ngayle = tongSoNgay / 2 ;
-                Console.WriteLine("tong so tuan : " + tuan );
-                Console.WriteLine("tong so ngay : " + ngayle );
-// bai 12
-                int tongGiay = 3665;
-                int gio = tongGiay / 3600;
-                int giayConLaiSauGio = tongGiay % 3600;
-                int phut = giayConLaiSauGio / 60;
-                int giay = giayConLaiSauGio % 60;
-                Console.WriteLine("giayConLai : "  + gio);
-                Console.WriteLine("phutconlai : " + phut);
-                Console.WriteLine("giayconlai : " + giay);
-//bai 13
-                int diemTichLuy = 100 ;
-                diemTichLuy += 50 ;
-                diemTichLuy -= 30 ;
-                diemTichLuy *= 2 ;
-                Console.WriteLine("diemTichLuy : " + diemTichLuy);
-// bai 14
-                int a = 10;
-                int b1 = a++;
-                int c12 = ++a;
-                Console.WriteLine("a : " + b1);
-                Console.WriteLine("a : " + c12);
-// bai 15
-                double luongCoBan = 12000000;
-                double heSoLuong = 1.5;
-                double tongluong = luongCoBan * heSoLuong;
-                double  baohiem = tongluong * 0.105;
-                Console.WriteLine("baohiem : " + baohiem);
-// BAI 16
-                int n = 26;
-                bool laSoChan = (n % 2 == 0); 
-                Console.WriteLine($"So {n} là so chan: {laSoChan}");
-// Bài 17
-                double diemTrungBinh = 4.8;
-                bool laDat = diemTrungBinh >= 5.0; 
-                Console.WriteLine($"Voi diem {diemTrungBinh}, ket qua đat (>= 5.0): {laDat}");
-// Bài 18
-                int giaTri = 35;
-                bool hopLe = giaTri is > 10 and < 50; 
-                Console.WriteLine($"Gia tri {giaTri} nam trong khoang (10 < x < 50): {hopLe}");
-// Bài 19
-                bool troiMua = false;
-                bool coTien = true;
-                bool diChoi = !troiMua && coTien; 
-                Console.WriteLine($"Troi mua: {troiMua}, Co tien: {coTien} -> Co the đi choi: {diChoi}");
-// bai 20
-                double chieuCao = 1.75; 
-                double canNang = 78.5;  
-                double bmi = canNang / (chieuCao * chieuCao);
-                bool biThuaCan = bmi >= 25.0;
-                Console.WriteLine($"Chieu cao: {chieuCao}m, Can nang: {canNang}kg");
-                Console.WriteLine($"Chi so BMI: {bmi:F2}");
-                Console.WriteLine($"Bi thua can (BMI >= 25.0): {biThuaCan}");
+class Student1
+{
+    public string Name;
+    public int Age;
+
+    public void Display()
+    {
+        Console.WriteLine($"Name: {Name}, Age: {Age}");
+    }
+}
+
+class Rectangle
+{
+    public double Width;
+    public double Height;
+
+    public double Area() => Width * Height;
+    public double Perimeter() => 2 * (Width + Height);
+}
+
+class Book
+{
+    public string Title;
+    public string Author;
+    public double Price;
+
+    public Book(string title, string author, double price)
+    {
+        Title = title;
+        Author = author;
+        Price = price;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine($"Title: {Title}, Author: {Author}, Price: {Price:C}");
+    }
+}
+
+class Employee
+{
+    public string Name;
+    public double Salary;
+
+    public Employee()
+    {
+        Name = "Unknown";
+        Salary = 0;
+    }
+
+    public Employee(string name)
+    {
+        Name = name;
+        Salary = 0;
+    }
+
+    public Employee(string name, double salary)
+    {
+        Name = name;
+        Salary = salary;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine($"Employee: {Name}, Salary: {Salary:C}");
+    }
+}
+
+class Student5
+{
+    public string Name;
+    private int age;
+
+    public int Age
+    {
+        get { return age; }
+        set
+        {
+            if (value >= 0 && value <= 120)
+                age = value;
+            else
+                Console.WriteLine("Tuổi không hợp lệ! Phải từ 0 đến 120.");
+        }
+    }
+
+    public void Display()
+    {
+        Console.WriteLine($"Name: {Name}, Age: {Age}");
+    }
+}
+
+class Student6
+{
+    public string Name;
+    public static int Count = 0;
+
+    public Student6(string name)
+    {
+        Name = name;
+        Count++;
+    }
+
+    public static void ShowCount()
+    {
+        Console.WriteLine($"Tổng số sinh viên: {Count}");
+    }
+}
+
+class BankAccount
+{
+    public string Owner;
+    private double balance;
+
+    public BankAccount(string owner, double initialBalance = 0)
+    {
+        Owner = owner;
+        balance = initialBalance >= 0 ? initialBalance : 0;
+    }
+
+    public void Deposit(double amount)
+    {
+        if (amount > 0)
+        {
+            balance += amount;
+            Console.WriteLine($"Nạp {amount:C} thành công.");
+        }
+        else
+            Console.WriteLine("Số tiền nạp phải lớn hơn 0.");
+    }
+
+    public void Withdraw(double amount)
+    {
+        if (amount <= 0)
+            Console.WriteLine("Số tiền rút phải lớn hơn 0.");
+        else if (amount > balance)
+            Console.WriteLine("Số dư không đủ! Không cho số dư âm.");
+        else
+        {
+            balance -= amount;
+            Console.WriteLine($"Rút {amount:C} thành công.");
+        }
+    }
+
+    public void ShowBalance()
+    {
+        Console.WriteLine($"Chủ tài khoản: {Owner}, Số dư: {balance:C}");
+    }
+}
+
+class Car
+{
+    public string Brand;
+    public int Year;
+
+    public Car(string brand, int year)
+    {
+        this.Brand = brand;
+        this.Year = year;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine($"Brand: {this.Brand}, Year: {this.Year}");
+    }
+}
+
+class Product
+{
+    public string Name;
+    public double Price;
+    public int Quantity;
+
+    public Product(string name, double price, int quantity)
+    {
+        Name = name;
+        Price = price;
+        Quantity = quantity;
+    }
+
+    public double TotalValue() => Price * Quantity;
+
+    public void Display()
+    {
+        Console.WriteLine($"Product: {Name}, Price: {Price:C}, Qty: {Quantity}, Total: {TotalValue():C}");
+    }
+}
+
+class Student10
+{
+    public string Name;
+    public double Math;
+    public double Physics;
+    public double Chemistry;
+
+    public Student10(string name, double math, double physics, double chemistry)
+    {
+        Name = name;
+        Math = math;
+        Physics = physics;
+        Chemistry = chemistry;
+    }
+
+    public double Average() => (Math + Physics + Chemistry) / 3;
+
+    public string Rank()
+    {
+        double avg = Average();
+        if (avg >= 8) return "Giỏi";
+        if (avg >= 6.5) return "Khá";
+        if (avg >= 5) return "Trung bình";
+        return "Yếu";
+    }
+
+    public void Display()
+    {
+        Console.WriteLine($"Tên: {Name}");
+        Console.WriteLine($"  Toán: {Math}, Lý: {Physics}, Hóa: {Chemistry}");
+        Console.WriteLine($"  Trung bình: {Average():F2} - Xếp loại: {Rank()}");
+    }
+}
+
+class BankAccountPro
+{
+    private double balance;
+
+    public double Balance
+    {
+        get { return balance; }
+    }
+
+    public BankAccountPro(double initialBalance = 0)
+    {
+        balance = initialBalance >= 0 ? initialBalance : 0;
+    }
+
+    public void Deposit(double amount)
+    {
+        if (amount > 0)
+        {
+            balance += amount;
+            Console.WriteLine($"Nạp {amount:C} thành công.");
+        }
+        else
+            Console.WriteLine("Số tiền nạp phải lớn hơn 0.");
+    }
+
+    public void Withdraw(double amount)
+    {
+        if (amount <= 0)
+            Console.WriteLine("Số tiền rút phải lớn hơn 0.");
+        else if (amount > balance)
+            Console.WriteLine($"Không đủ số dư! Hiện có: {balance:C}. Không cho rút quá số dư.");
+        else
+        {
+            balance -= amount;
+            Console.WriteLine($"Rút {amount:C} thành công.");
+        }
+    }
+
+    public void Display()
+    {
+        Console.WriteLine($"Số dư hiện tại: {Balance:C}");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+        Console.WriteLine("===== BÀI 1: Student =====");
+        Student1 s1 = new Student1 { Name = "An", Age = 20 };
+        Student1 s2 = new Student1 { Name = "Bình", Age = 22 };
+        s1.Display();
+        s2.Display();
+
+        Console.WriteLine("\n===== BÀI 2: Rectangle =====");
+        Rectangle rect = new Rectangle { Width = 5, Height = 3 };
+        Console.WriteLine($"Diện tích: {rect.Area()}, Chu vi: {rect.Perimeter()}");
+
+        Console.WriteLine("\n===== BÀI 3: Book =====");
+        Book book = new Book("Lập trình C#", "Nguyễn Văn A", 120000);
+        book.Display();
+
+        Console.WriteLine("\n===== BÀI 4: Employee (Overloading Constructor) =====");
+        Employee e1 = new Employee();
+        Employee e2 = new Employee("Lan");
+        Employee e3 = new Employee("Minh", 15000000);
+        e1.Display();
+        e2.Display();
+        e3.Display();
+
+        Console.WriteLine("\n===== BÀI 5: Property =====");
+        Student5 s5 = new Student5 { Name = "Hoa" };
+        s5.Age = 19;
+        s5.Display();
+        s5.Age = 200; 
+
+        Console.WriteLine("\n===== BÀI 6: Static =====");
+        Student6 sv1 = new Student6("Nam");
+        Student6 sv2 = new Student6("Linh");
+        Student6 sv3 = new Student6("Hùng");
+        Student6.ShowCount();
+
+        Console.WriteLine("\n===== BÀI 7: Access Modifier =====");
+        BankAccount acc = new BankAccount("Trần Văn B", 500000);
+        acc.ShowBalance();
+        acc.Deposit(200000);
+        acc.Withdraw(100000);
+        acc.Withdraw(700000); // sẽ bị từ chối
+        acc.ShowBalance();
+
+        Console.WriteLine("\n===== BÀI 8: this =====");
+        Car car = new Car("Toyota", 2022);
+        car.Display();
+
+        Console.WriteLine("\n===== BÀI 9: Product =====");
+        Product p = new Product("Laptop", 15000000, 3);
+        p.Display();
+
+        Console.WriteLine("\n===== BÀI 10: Tổng hợp Student =====");
+        Student10 st1 = new Student10("An", 9, 8.5, 8);
+        Student10 st2 = new Student10("Bình", 6, 7, 6.5);
+        Student10 st3 = new Student10("Cường", 4, 5, 4.5);
+        st1.Display();
+        st2.Display();
+        st3.Display();
+
+        Console.WriteLine("\n===== BÀI THỬ THÁCH: BankAccount Pro =====");
+        BankAccountPro proAcc = new BankAccountPro(1000000);
+        proAcc.Display();
+        proAcc.Deposit(500000);
+        proAcc.Withdraw(200000);
+        proAcc.Withdraw(2000000); // vượt số dư
+        proAcc.Display();
+    }
+}
